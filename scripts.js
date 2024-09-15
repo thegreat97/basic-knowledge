@@ -95,3 +95,29 @@ function playvid() {
         video.pause();
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements with the class 'counting'
+    const counters = document.querySelectorAll('.counting');
+
+    // Function to animate the counter
+    const animateCounter = (element, target) => {
+        let count = 0;
+        const speed = 200; // Speed of the animation
+
+        // Update the counter every few milliseconds
+        const interval = setInterval(() => {
+            count += Math.ceil(target / speed); // Increment by a fraction of the target
+            if (count >= target) {
+                count = target; // Ensure we don't exceed the target
+                clearInterval(interval); // Stop the interval when we reach the target
+            }
+            element.textContent = count; // Update the counter display
+        }, 1); // Adjust the interval for smoother or faster animation
+    };
+
+    // Loop through all counters and start the animation
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target'); // Get the target value from data attribute
+        animateCounter(counter, target); // Call the animation function
+    });
+});
