@@ -122,6 +122,7 @@ ul li a:hover {
     justify-content: center;
     background-color: #242424;
     margin: 0px 0px 0px 20px;
+    cursor: pointer;
 }
 .book-now:hover {
     transform: scale(1.05);
@@ -243,21 +244,7 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
-/* Responsive design for medium screens and up */
-@media (max-width: 768px) {
-    .box {
-        width: 150px; /* Adjust width for medium screens */
-        height: 150px; /* Adjust height for medium screens */
-    }
-}
 
-/* Responsive design for large screens and up */
-@media (max-width: 900px) {
-    .box {
-        width: 200px; /* Adjust width for large screens */
-        height: 200px; /* Adjust height for large screens */
-    }
-}
 /* galaxy styling */
 .galaxy {
     margin: 130px 0 0 0;
@@ -391,22 +378,6 @@ h1 {
 }
 .item:hover{
     transform: scale(1.05);
-
-}
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .item {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 760px) {
-    .item {
-        width: calc(100% - 20px);
-    }
-}
-.item{
-    background-color: hsl(0, 0%, 100%);
 
 }
 /*get styling */
@@ -714,4 +685,108 @@ h1 {
     margin: 0% -150px;
     align-content: center;
     padding: 10px 0px;
+}
+@media only screen and (max-width: 768px) {
+    .contain {
+        flex-direction: column;
+    }
+
+    .video {
+        margin-top: 20px;
+    }
+
+    .navbar ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .stellar-box {
+        width: 100%;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .aside {
+        flex-direction: column;
+    }
+
+    .container-about .block {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* For phones (portrait) */
+@media only screen and (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .push-buttons {
+        text-align: center;
+    }
+
+    .push-buttons a, .push-buttons button {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .stellar-box {
+        width: 100%;
+    }
+
+    .gallery .item {
+        width: 100%;
+    }
+
+    .container-about .block {
+        width: 100%;
+    }
 }

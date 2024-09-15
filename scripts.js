@@ -87,3 +87,11 @@ document.getElementById('startButton').addEventListener('click', function() {
         }
     }, 100); // Update every 100 milliseconds
 });
+function playvid() {
+    const video = document.getElementById('video');
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
