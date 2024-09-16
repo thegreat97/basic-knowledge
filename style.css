@@ -850,7 +850,7 @@ h1 {
 
 @media (max-width: 576px) {
     body {
-        margin: 0 0 0 30px;
+        margin: 0px;
     }
 
     .content {
@@ -858,9 +858,6 @@ h1 {
         flex-direction: column;
         width: 100%;
 
-    }
-    .navbar {
-       
     }
     .contain {
         flex-direction: column;
