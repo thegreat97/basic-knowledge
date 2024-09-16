@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-content: center;
     margin: 20px 0 0 0;
-    position: relative;
+    
 }
 /*logo styling */
 .logo {
@@ -59,7 +59,7 @@ ul li a:hover {
 }
 /* log in and sign up styling */
 .push-buttons {
-    margin: 20px 0 0 0;
+    margin: 20px 10px 0;
     cursor: pointer;
     float: left;
     text-decoration: none;
@@ -71,6 +71,7 @@ ul li a:hover {
     background-color: #000000;
     color: #fff;
     border-radius: 20px;
+    font-size: 15px;
 }
 .push-buttons button:hover{
     color: #ffffff;
@@ -92,7 +93,6 @@ ul li a:hover {
     margin-right: 70px;
     word-spacing: 5px;
     line-height: 30px;
-    height: 450px;
 }
 .up{
     background-color: black;
@@ -105,7 +105,7 @@ ul li a:hover {
     height: 42px;  
 }
 .book {
-    margin: 44px 0 0 0;
+    margin: 30px 0 0 5px;
     display: flex;
     align-items: center;
 }
@@ -120,8 +120,8 @@ ul li a:hover {
     color: #000000;
     align-items: center;
     justify-content: center;
-    background-color: #242424;
-    margin: 0px 0px 0px 20px;
+    background-color: #ffffff;
+    margin: 0px 0px 0px 24px;
     cursor: pointer;
 }
 .book-now:hover {
@@ -686,98 +686,216 @@ h1 {
     align-content: center;
     padding: 10px 0px;
 }
-@media only screen and (max-width: 768px) {
+
+/* Responsive design */
+@media (max-width: 1280px) {
+    body {
+        margin: 0px 100px;
+    }
+
     .contain {
-       
-       flex-direction: column;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
     }
+    .container {
+        flex-direction: row;
+        align-content: center;
+    }
+    .box {
+        flex-direction: column;
+    }
+  
     .section {
-      flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .video {
-        margin-top: 20px;
+    .container-about {
+        flex-direction: column;
     }
 
-    .navbar ul {
-        text-align: center;
-        padding: 0;
+    .block {
+        width: 90%;
+        margin: 10px auto;
     }
 
-    .navbar ul li {
-        display: block;
+    .gallery {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        margin: 0px 50px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-name {
+        font-size: 18px;
+    }
+
+    .push-buttons {
+        float: none;
         margin: 10px 0;
     }
 
     .container {
-       
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .stellar-box {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .carousel-images img {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0px 20px;
+        padding: 0px 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-name {
+        font-size: 16px;
+    }
+
+    .push-buttons {
+        margin: 10px 0;
+    }
+
+    .container {
         flex-direction: column;
     }
 
     .box {
         width: 100%;
+        height: auto;
+        margin: 10px 0;
     }
 
     .stellar-box {
         width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .gallery {
         flex-direction: column;
     }
 
-    .service-item {
+    .item {
         width: 100%;
-        margin-bottom: 10px;
-        
-
+        margin: 10px 0;
     }
 
-    .gallery .item {
-        width: 100%;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
+    .submit {
+        flex-direction: column;
     }
 
-    .aside {
-        flex-wrap: wrap;
+    .reg {
+        margin: 20px 0;
     }
 
-    .container-about .block {
+    .sub-mit {
+        margin: 20px 0;
         width: 100%;
     }
 
-    footer {
-        text-align: center;
+    .footer {
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
     }
 }
 
-/* For phones (portrait) */
-@media only screen and (max-width: 480px) {
-    header {
-        text-align: center;
-        flex-wrap: wrap;
+@media (max-width: 576px) {
+    body {
+        margin: 0 0 0 30px;
     }
 
-    .logo-img {
-        width: 40px;
-        height: 40px;
+    .content {
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .navbar {
+       
+    }
+    .contain {
+        flex-direction: column;
+        margin: 0 0 0 15px;
+
+    }
+    .up {
+        margin: 0 0 0 5px;
+        width: 100px;
+    }
+    .page input, .up {
+        flex-direction: row;
+        width: 100%;
+    } 
+    .book {
+        flex-direction: row;
+        width: 100%;
+    }
+    .page {
+        width: 100%;
+    }
+    .section {
+        flex-direction: column;
+        height: auto;
+    }
+    .year {
+        flex-direction: column;
     }
 
-    .navbar ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
+    .logo-name {
+        font-size: 14px;
     }
 
     .push-buttons {
-        text-align: center;
-    }
-
-    .push-buttons a, .push-buttons button {
-        display: block;
-        margin: 10px auto;
+        margin: 5px 0;
     }
 
     .container {
@@ -786,17 +904,72 @@ h1 {
 
     .box {
         width: 100%;
+        height: auto;
+        margin: 10px 0;
     }
 
     .stellar-box {
+        flex-direction: column;
         width: 100%;
+        height: auto;
+        margin: 10px 0;
     }
 
-    .gallery .item {
-        width: 100%;
+    .section {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    .container-about .block {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .item {
         width: 100%;
+        margin: 10px 0;
+    }
+    .get {
+        flex-direction: column;
+    }
+    .blog {
+        flex-direction: column;
+    }
+    .aside {
+        flex-direction: column;
+    }
+    .right-div {
+        margin: 10px 0 0 0;
+    }
+    .selector {
+        flex-direction: column;
+
+    }
+    .kenya img {
+        width: 100%
+    }
+
+    .submit {
+        flex-direction: column;
+    }
+
+    .reg {
+        margin: 10px 0;
+    }
+
+    .sub-mit {
+        margin: 10px 0;
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .container-footer {
+        flex-direction: column;
+
+    }
+
+    .footer {
+        flex-direction: column;
+        margin: 0 -20px 0 -20px;
+        padding: 10px;
     }
 }
