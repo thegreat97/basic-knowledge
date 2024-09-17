@@ -95,29 +95,44 @@ function playvid() {
         video.pause();
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    // Select all elements with the class 'counting'
+document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counting');
 
-    // Function to animate the counter
-    const animateCounter = (element, target) => {
-        let count = 0;
-        const speed = 200; // Speed of the animation
+    function updateCount() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
 
-        // Update the counter every few milliseconds
-        const interval = setInterval(() => {
-            count += Math.ceil(target / speed); // Increment by a fraction of the target
-            if (count >= target) {
-                count = target; // Ensure we don't exceed the target
-                clearInterval(interval); // Stop the interval when we reach the target
+            if (count < target) {
+                const increment = target / 200; // Adjust this number to control the speed of counting
+                counter.innerText = Math.ceil(count + increment);
+
+                setTimeout(updateCount, 10); // Adjust this value to control the animation speed
+            } else {
+                counter.innerText = target;
             }
-            element.textContent = count; // Update the counter display
-        }, 1); // Adjust the interval for smoother or faster animation
-    };
+        });
+    }
 
-    // Loop through all counters and start the animation
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target'); // Get the target value from data attribute
-        animateCounter(counter, target); // Call the animation function
-    });
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        counters.forEach(counter => {
+            if (isInViewport(counter)) {
+                updateCount();
+                window.removeEventListener('scroll', handleScroll);
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check immediately in case the element is already in view
 });
