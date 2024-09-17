@@ -795,7 +795,6 @@ h1 {
 @media (max-width: 768px) {
     body {
         margin: 0px 20px;
-        padding: 0px 20px;
     }
 
     .content {
@@ -858,7 +857,7 @@ h1 {
 
 @media (max-width: 576px) {
     body {
-        margin: 0 0 0 30px;
+        margin: 0px;
     }
 
     .content {
@@ -866,9 +865,6 @@ h1 {
         flex-direction: column;
         width: 100%;
 
-    }
-    .navbar {
-       
     }
     .contain {
         flex-direction: column;
@@ -972,6 +968,7 @@ h1 {
     }
     .container-footer {
         flex-direction: column;
+        margin: 10px 0 0 0;
 
     }
 
