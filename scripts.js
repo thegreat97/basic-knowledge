@@ -103,14 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
 
+
+                const speed = 200;
+
             if (count < target) {
-                const increment = target / 200; // Adjust this number to control the speed of counting
+                const increment = target / speed; // Adjust this number to control the speed of counting
                 counter.innerText = Math.ceil(count + increment);
 
-                setTimeout(updateCount, 10); // Adjust this value to control the animation speed
+                setTimeout(updateCount, 1); // Adjust this value to control the animation speed
             } else {
                 counter.innerText = target;
             }
+            updateCount();
         });
     }
 

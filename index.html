@@ -346,31 +346,6 @@
 
     <script src="scripts.js">
     </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll('.counting');
-
-    function updateCount() {
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-
-            const speed = 200;
-
-            if (count < target) {
-                const increment = target / speed; // Adjust this number to control the speed of counting
-                counter.innerText = Math.ceil(count + increment);
-
-                setTimeout(updateCount, 1); // Adjust this value to control the animation speed
-            } else {
-                counter.innerText = target;
-            }
-        };
-              updateCount();
-        });
-    });
-
-</script>
 </body>
 
 </html>
