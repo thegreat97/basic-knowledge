@@ -237,7 +237,7 @@ h1 {
 }
 
 .box:hover {
-    background-color: #e3e9e3; /* Darker green on hover */
+    background-color: #753836; /* Darker green on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 .box img {
