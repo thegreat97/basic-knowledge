@@ -1,8 +1,9 @@
 /* Basic reset */
 body {
     font-family: Arial, sans-serif;
-    background-color:  hsl(199, 37%, 58%);
+    background-color:  white;
     margin: 0px 150px 0px 150px;
+    font-weight: bold;
     
 }
 
