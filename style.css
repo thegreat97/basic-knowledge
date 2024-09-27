@@ -699,12 +699,9 @@ h1 {
 
 /* Responsive design */
 @media (max-width: 1280px) {
-    body {
-        margin: 0px 100px;
-    }
 
     .contain {
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
         height: fit-content;
     }
