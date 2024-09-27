@@ -225,6 +225,7 @@ h1 {
     display: block;
     flex-wrap: wrap;
     align-content: center;
+    background-color: #380f0f;
     color: rgb(0, 0, 0); /* White text color */
     padding: 20px;
     border-radius: 8px;
